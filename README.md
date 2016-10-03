@@ -5,12 +5,14 @@ Stack:
  
 Getting started:
 
-1. clone this repo
-2. cd path/to/
+1. clone https://github.com/AnyaGorshkova/dz2.git project
+2. cd project
 3. npm install gulpjs/gulp-cli -g  // Install the latest Gulp CLI tools globally
 4. npm install
-6. run "gulp" command to start
+6. gulp
 
 
-##Горшкова Анна Юрьевна, домашее задание №2
+##Горшкова Анна, домашее задание №2
+
+Кривовато конечно, буду доделывать и исправлять!!!
 
