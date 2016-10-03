@@ -1,0 +1,87 @@
+extends ../_template
+
+block variables
+  - var title = 'Моё портфолио'
+
+block content
+  div.wrapper-page
+   div.main-nav
+   include ../common/_header-angle.pug
+   section.section.section_my-works
+    div.section__header
+     div.header-underline-bg__svg-container
+      svg.header-underline-bg__svg
+       use(xlink:href='/assets/img/sprite.svg#works_header')
+     div.header-underline-bg__title Мои работы
+    div.slaider
+     ul.slaider__list
+       li.slider__item
+        div.container
+         div.slider__image-container
+          img.slider__image(src="assets/img/work-1.png", alt="картинка")
+         div.slider__description-container
+          div.slider__header-underline
+           div.header__underline.header__underline_border_left
+            div.header-underline__title.header-underline__title_about Сайт школы онлайн образования
+          div.slider__description-site html, css, javascript
+          div.login-button.login-button__green Посмотреть сайт
+     div.dir
+      svg.dir__svg
+       use(xlink:href='/assets/img/sprite.svg#portf_arrow_up')
+     div.dir.dir_right
+      svg.dir__svg
+       use(xlink:href='/assets/img/sprite.svg#portf_arrow_down')
+     ul.pagination
+      li.pagination__item.pagination__item_active
+      li.pagination__item
+      li.pagination__item
+      li.pagination__item
+   section.section.section_about
+    div.section__header.section__header2
+     div.header-underline-bg__svg-container
+      svg.header-underline-bg__svg
+       use(xlink:href='/assets/img/sprite.svg#about_header')
+     div.header-underline-bg__title Что обо мне говорят
+    div.reviews-container
+     div.container
+      ul.reviews-list
+       li.review
+        div.review__container
+         div.review__img
+          div.avatar.avatar_small
+           img.avatar__image(src="assets/img/zar.png", alt="")
+         div.review__text-container
+          div.review__svg
+          div.review__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+         div.review__author-container
+          div.review_author-name Зар Захаров
+          div.review_author-work преподаватель
+       li.review
+        div.review__container
+         div.review__img
+          div.avatar.avatar_small
+           img.avatar__image(src="assets/img/dima.png", alt="")
+         div.review__text-container
+          div.review__svg
+          div.review__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+         div.review__author-container
+          div.review_author-name Ковальчук Дмирий
+          div.review_author-work основатель Loftschool
+    div.popup-connect
+     div.popup-connect__header
+      div.header-underline
+       div.header-underline__title.header-underline__title_about Связаться со мной
+     form.login_form
+      div.input_container
+       input#login_input.login_input(type=text, placeholder="Имя")
+      div.input_container
+       input#pass_input.login_input(type=text, placeholder="Email")
+      div.message_container
+       textarea#message(name="", cols="30", rows="10")
+     div.buttons_container
+      ul.buttons
+       li.button.button_login
+        a.button_link(href="#") Отправить
+       li.button.button_login
+        a.button_link(href="#") Очистить
+    include ../common/_footer.pug

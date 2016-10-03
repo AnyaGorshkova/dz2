@@ -1,0 +1,22 @@
+.social-container{
+	position:absolute;
+	top:30px;
+	left:30px;
+}
+.social-container svg{
+
+	opacity:1;
+}
+.arrow-down{
+	position: absolute;
+	right:50%;
+	bottom:15%;
+	margin-right: -13px;
+}
+.arrow-down__svg{
+	width:26px;
+	height:16px;
+	fill:#fff;
+	opacity:0.7;
+
+}

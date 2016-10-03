@@ -1,0 +1,102 @@
+extends ../_template
+
+block variables
+  - var title = 'Обо мне'
+
+block content
+  div.wrapper-page
+   div.main-nav
+   header.header-page.header-page_angle.header-page_about
+    div.social-container
+     include ../common/_social.pug
+    div.hamburger
+     svg.hamburger__svg
+      use(xlink:href='/assets/img/sprite.svg#hamburger')   
+    div.site-description
+     div.site-description__avatar
+      div.avatar
+       img.avatar__image(src="assets/img/avatar.png", alt="")
+     div.site-info
+      div.site-info__name Анна Горшкова
+      div.site-info__descr Личный сайт веб разработчика
+      div.site-info__bg
+    div.arrow-down
+     svg.arrow-down__svg
+        use(xlink:href='/assets/img/sprite.svg#arrow_down') 
+   section.section.section_about-me
+    div.about-part
+     div.section__header.section__header_small
+      div.about-part__header
+       div.header-underline-bg__svg-container
+        svg.header-underline-bg__svg
+         use(xlink:href='/assets/img/sprite.svg#about_header')
+       div.header-underline-bg__title Обо мне
+     div.about_part__image-container
+      img.about_part__image(src="assets/img/avatar.png", alt="")
+     div.about_part__header-text
+      div.header-underline
+       div.header-underline__title.header-underline__title_about Кто я 
+     div.about_part__text-container
+      div.about_part__text
+       p Я вебразрабочик из Красноярска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+       p Этот сайт я сделал в рамках обучения в школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
+    div.my-skills-part
+     div.my-skills-part__header
+      div.header-underline
+       div.header-underline__title.header-underline__title_about Чем я могу быть вам полезен
+     div.my-skills-part__description Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend.  Но давайте по порядку.
+     div.my-skills__skills
+      ul.my-skills__list
+       div.my-skills__header-list Frontend
+       li.my-skills__item
+        div.my-skills__text HTML5  
+       li.my-skills__item
+        div.my-skills__text CSS3
+       li.my-skills__item
+        div.my-skills__text JavaScript & jQuery
+      ul.my-skills__list
+       div.my-skills__header-list Backend
+       li.my-skills__item
+        div.my-skills__text PHP  
+       li.my-skills__item
+        div.my-skills__text mySQL
+       li.my-skills__item
+        div.my-skills__text Node.js & npm
+       li.my-skills__item
+        div.my-skills__text Mongo.db
+      ul.my-skills__list
+       div.my-skills__header-list WorkFlow
+       li.my-skills__item
+        div.my-skills__text HTML5  
+       li.my-skills__item
+        div.my-skills__text CSS3
+       li.my-skills__item
+        div.my-skills__text JavaScript & jQuery
+   section.section.section_map
+    div.popup-connect.popup-connect_contact
+     div.popup-connect__header
+      div.header-underline
+       div.header-underline__title.header-underline__title_about Контакты
+     div.contact-container
+      ul.contact__list
+       li.contact__item.contact__item_skype
+        div.contact__icon
+         svg.contact__svg
+            use(xlink:href='/assets/img/sprite.svg#skype')
+        div.contact__text gorshkova_anna_spb
+       li.contact__item.contact__item_mail
+        div.contact__icon
+         svg.contact__svg
+            use(xlink:href='/assets/img/sprite.svg#envelope2')
+        div.contact__text anua_spb@mail.ru
+       li.contact__item.contact__item_phone
+        div.contact__icon
+         svg.contact__svg
+            use(xlink:href='/assets/img/sprite.svg#phone2')
+        div.contact__text +79214915397
+       li.contact__item.contact__item_address
+        div.contact__icon
+         svg.contact__svg
+            use(xlink:href='/assets/img/sprite.svg#map_marker')
+        div.contact__text г. Красноярск
+    include ../common/_footer.pug

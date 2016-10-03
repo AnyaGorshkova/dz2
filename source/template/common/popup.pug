@@ -1,24 +1,6 @@
-extends ../_template
-
-block variables
-  - var title = 'Home page'
-
-block content
-  div.wrapper-page.wrapper-page_welcome
-   header.header-page.header-page_welcome
-    div.login-button Авторизоваться
-    div.popup-wrapper
-     div.avatar
-      img.avatar__image(src="assets/img/avatar.png", alt="")
-     div.site-info
-      div.site-info__name Анна Горшкова
-      div.site-info__descr Личный сайт веб разработчика
-     include ../common/_social.pug
-     include ../common/_buttons.pug
-    div.popup-wrapper#webdev
-     div.popup-wrapper__header
-      div.header-underline
-       div.header-underline__title Авторизуйтесь
+div.popup_wrapper#webdev
+     div.header-underline
+      div.header-underline__title Авторизуйтесь
      form.login_form
       div.input_container
        label.icon_input(for="login_input")
@@ -46,12 +28,3 @@ block content
         a.button_link(href="#") На главную
        li.button.button_login
         a.button_link(href="#") Войти
-   div.footer-bottom.footert-bottom_abs
-    div.container
-     ul.footer-bottom__list
-      li.footer-bottom__item <i class="fa fa-copyright" aria-hidden="true"></i> Анна Горшкова
-      li.footer-bottom__item Создано с лбовью в LoftSchool
-      li.footer-bottom__item 2016
-
-
-  
